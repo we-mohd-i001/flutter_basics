@@ -30,7 +30,7 @@ class CustomButton extends StatelessWidget {
         onTap: (){
           debugPrint(infoMessage);
         },
-        splashColor: Colors.grey.shade200,
+        splashColor: Colors.grey.shade100,
         child: Center(
           child: Icon(
             buttonIcon,

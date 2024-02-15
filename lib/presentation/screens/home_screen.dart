@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_basics/presentation/widgets/container_center_padding-example.dart';
 import 'package:flutter_basics/presentation/widgets/custom_button.dart';
+import 'package:flutter_basics/presentation/widgets/gesture_button.dart';
 import 'package:flutter_basics/presentation/widgets/layout_builder_example.dart';
 import 'package:flutter_basics/presentation/widgets/row_expanded_example.dart';
 
@@ -89,6 +90,16 @@ class HomeScreen extends StatelessWidget {
               infoMessage: 'CustomButton 1 pressed',
               buttonIcon: Icons.holiday_village,
               buttonIconColor: Colors.white,),
+            const SizedBox(
+              height: 20,
+            ),
+            const GestureButton(
+              infoMessage: 'Gesture Button 1 Pressed',
+              buttonText: 'Gesture Button 1',
+            ),
+            const SizedBox(
+              height: 20,
+            ),
           ],
         ),
       ),
