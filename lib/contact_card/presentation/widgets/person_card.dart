@@ -16,13 +16,15 @@ class PersonCard extends StatelessWidget {
       width: size.width-40,
       height: size.height*0.22,
       decoration: BoxDecoration(
-        color: Colors.cyan,
+          gradient: const LinearGradient(
+            colors: [Colors.deepPurple,Colors.white70, Colors.pink],
+          ) ,
         borderRadius: BorderRadius.circular(16)
       ),
       child: Row(
 
         children: [
-          SizedBox(width: 10,),
+          const SizedBox(width: 10,),
           Expanded(
             flex: 1,
             child: Container(
