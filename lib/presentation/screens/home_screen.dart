@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_basics/contact_card/presentation/widgets/person_card.dart';
 import 'package:flutter_basics/presentation/widgets/container_center_padding-example.dart';
 import 'package:flutter_basics/presentation/widgets/custom_button.dart';
 import 'package:flutter_basics/presentation/widgets/gesture_button.dart';
@@ -97,6 +98,15 @@ class HomeScreen extends StatelessWidget {
               infoMessage: 'Gesture Button 1 Pressed',
               buttonText: 'Gesture Button 1',
             ),
+            const SizedBox(
+              height: 20,
+            ),
+            const PersonCard(
+                name: 'Imran',
+                age: '24',
+                country: 'India',
+                job: 'Flutter Developer',
+                imageUrl: 'https://media.licdn.com/dms/image/D4D03AQFOQhgIH5_5UQ/profile-displayphoto-shrink_200_200/0/1691909354816?e=2147483647&v=beta&t=sWXmIN7RpPPAz5RFOqJqVY50vEi3_CaXtqrYe11wL-I'),
             const SizedBox(
               height: 20,
             ),
