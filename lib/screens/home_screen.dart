@@ -5,6 +5,7 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
         title: const Text('Flutter Basics'),
@@ -73,10 +74,10 @@ class HomeScreen extends StatelessWidget {
             const SizedBox(
               height: 20,
             ),
-            const SizedBox(
-              height: 200,
+            SizedBox(
+              height: size.height,
               width: 200,
-              child: Placeholder(
+              child: const Placeholder(
                 color: Colors.red,
                 strokeWidth: 5,
                 child: Center(child: Text('My PlaceHolder')),
@@ -85,14 +86,50 @@ class HomeScreen extends StatelessWidget {
             const SizedBox(
               height: 20,
             ),
-            const SizedBox(
+            SizedBox(
               height: 200,
-              width: 200,
-              child: Placeholder(
+              width: size.width,
+              child: const Placeholder(
                 color: Colors.green,
                 strokeWidth: 10,
                 child: Center(child: Text('My PlaceHolder')),
               ),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            Container(
+              width: 300,
+              height: 400,
+              color: Colors.green,
+              child: LayoutBuilder(builder: (BuildContext context, BoxConstraints constraints) {
+                return Center(
+                child: Container(
+                  color: Colors.brown,
+                  width: constraints.maxWidth * 0.7,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Container(
+                        width: 5,
+                        height: 20,
+                        color: Colors.white,
+                      ),
+                      Container(
+                        width: 5,
+                        height: 20,
+                        color: Colors.white,
+                      ),
+                      Container(
+                        width: 5,
+                        height: 20,
+                        color: Colors.white,
+                      )
+                    ],
+                  ),
+                )
+                );
+              }),
             ),
             const SizedBox(
               height: 20,
