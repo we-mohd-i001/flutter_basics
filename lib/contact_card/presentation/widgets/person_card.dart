@@ -6,7 +6,13 @@ class PersonCard extends StatelessWidget {
   final String country;
   final String job;
   final String imageUrl;
-  const PersonCard({super.key, required this.name, required this.age, required this.country, required this.job, required this.imageUrl});
+  const PersonCard({
+    super.key,
+    required this.name,
+    required this.age,
+    required this.country,
+    required this.job,
+    required this.imageUrl});
 
   @override
   Widget build(BuildContext context) {
