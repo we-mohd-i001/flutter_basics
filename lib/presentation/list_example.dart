@@ -27,12 +27,18 @@ class ListExample extends StatelessWidget {
       body: SafeArea(
         child: ListView.builder(
           itemBuilder: (context, index) {
-        return Container(
-          height: 100,
-          color: colorList[index],
-        );
+            return Container(
+              height: 100,
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: [colorList[index], colorList[index + 1]],
+                ),
+              ),
+            );
           },
-          itemCount: colorList.length,
+          itemCount: colorList.length - 1,
         ),
       ),
     );
