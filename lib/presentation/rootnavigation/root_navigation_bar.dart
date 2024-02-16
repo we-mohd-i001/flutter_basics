@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_basics/presentation/counter/counter_screen.dart';
 import 'package:flutter_basics/presentation/list/list_example.dart';
 import 'package:flutter_basics/presentation/screens/home_screen.dart';
-import 'package:flutter_basics/theme/theme_screen.dart';
+import 'package:flutter_basics/theme/screens/theme_screen.dart';
 
 class RootNavigationBar extends StatefulWidget {
   const RootNavigationBar({super.key});
