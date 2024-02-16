@@ -8,13 +8,13 @@ class ListExample extends StatelessWidget {
     var colorList = [
       Colors.green,
       Colors.blue,
-      Colors.yellow,
+      Colors.blueGrey,
       Colors.purple,
       Colors.deepPurple,
       Colors.pink,
       Colors.deepOrange,
       Colors.orange,
-      Colors.black,
+      Colors.pinkAccent,
       Colors.red,
       Colors.redAccent,
       Colors.greenAccent
@@ -28,7 +28,7 @@ class ListExample extends StatelessWidget {
         child: ListView.builder(
           itemBuilder: (context, index) {
             return Container(
-              height: 100,
+              height: 300,
               decoration: BoxDecoration(
                 gradient: LinearGradient(
                   begin: Alignment.topCenter,
@@ -36,7 +36,7 @@ class ListExample extends StatelessWidget {
                   colors: [colorList[index], colorList[index + 1]],
                 ),
               ),
-            );
+            );;
           },
           itemCount: colorList.length - 1,
         ),
