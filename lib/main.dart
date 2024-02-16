@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_basics/presentation/counter/counter_screen.dart';
 import 'package:flutter_basics/presentation/screens/home_screen.dart';
 
 void main() {
@@ -15,7 +16,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const HomeScreen(),
+      routes: {
+        '/' : (context) => const HomeScreen(),
+        'counter': (context) => const CounterScreen()
+      },
     );
   }
 }

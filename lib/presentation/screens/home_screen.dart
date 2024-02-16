@@ -31,7 +31,11 @@ class HomeScreen extends StatelessWidget {
               child: Container(
                 height: 56,
                 width: 200,
-                color: Colors.lightBlue,
+                child: ElevatedButton(
+
+                  onPressed: (){
+                  Navigator.pushNamed(context, 'counter');
+                }, child: Text('Go to Counter'),),
               ),
             ),
             const SizedBox(
@@ -83,7 +87,7 @@ class HomeScreen extends StatelessWidget {
             )),
             Switch(value: false, onChanged: (value) {
 
-              print (value);
+              debugPrint ('$value');
             }),
             const CustomButton(
               buttonHeight: 50.0,
