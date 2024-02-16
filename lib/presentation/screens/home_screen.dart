@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_basics/application/theme_service.dart';
 import 'package:flutter_basics/contact_card/presentation/widgets/person_card.dart';
 import 'package:flutter_basics/presentation/widgets/container_center_padding-example.dart';
 import 'package:flutter_basics/presentation/widgets/custom_button.dart';
 import 'package:flutter_basics/presentation/widgets/gesture_button.dart';
 import 'package:flutter_basics/presentation/widgets/layout_builder_example.dart';
 import 'package:flutter_basics/presentation/widgets/row_expanded_example.dart';
+import 'package:provider/provider.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -24,27 +26,43 @@ class HomeScreen extends StatelessWidget {
             ),
             Container(
               decoration: BoxDecoration(
-                color: Colors.blueGrey,
-                borderRadius: BorderRadius.circular(8)
-              ),
+                  color: Colors.blueGrey,
+                  borderRadius: BorderRadius.circular(8)),
               height: size.height * 0.35,
               width: size.width - size.width * 0.1,
               child: Column(
-
                 children: [
                   const SizedBox(
                     height: 8,
                   ),
-                  const Text(
-                    'Router',
-                    style: TextStyle(fontSize: 24),
+                  Row(
+                    children: [
+                      const Expanded(
+                        child: Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 20),
+                          child: Text(
+                            'Router',
+                            style: TextStyle(fontSize: 24),
+                          ),
+                        ),
+                      ),
+                      IconButton(
+                        onPressed: () {
+                          Provider.of<ThemeService>(context, listen: false)
+                              .toggleTheme();
+                        },
+                        icon: Provider.of<ThemeService>(context).isDarkModeOn
+                            ? const Icon(Icons.dark_mode)
+                            : const Icon(Icons.light_mode),
+                      ),
+                    ],
                   ),
                   Padding(
                     padding: const EdgeInsets.all(20),
                     child: Column(
                       children: [
                         SizedBox(
-                          height: size.height*0.05,
+                          height: size.height * 0.05,
                           width: size.width * 0.67,
                           child: ElevatedButton(
                             onPressed: () {
@@ -57,7 +75,7 @@ class HomeScreen extends StatelessWidget {
                           height: 8,
                         ),
                         SizedBox(
-                          height: size.height*0.05,
+                          height: size.height * 0.05,
                           width: size.width * 0.67,
                           child: ElevatedButton(
                             onPressed: () {

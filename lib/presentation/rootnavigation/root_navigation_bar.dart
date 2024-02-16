@@ -24,9 +24,9 @@ class _RootNavigationBarState extends State<RootNavigationBar> {
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.blue,
-        selectedItemColor: Colors.yellow,
-        unselectedItemColor: Colors.white,
+        // backgroundColor: Colors.blue,
+        // selectedItemColor: Colors.yellow,
+        // unselectedItemColor: Colors.white,
         currentIndex: _curIndex,
         onTap: (index){
           setState(() {
