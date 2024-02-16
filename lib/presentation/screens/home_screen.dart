@@ -128,32 +128,19 @@ class HomeScreen extends StatelessWidget {
                 onPressed: () {
                   debugPrint('Button 1 Pressed!');
                 },
-                child: Container(
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(8),
-                      color: Colors.blue),
-                  child: const Padding(
-                    padding: EdgeInsets.all(8.0),
-                    child: Text(
-                      'Text Button',
-                      style: TextStyle(
-                        fontSize: 20,
-                        color: Colors.white,
-                        fontWeight: FontWeight.w500,
-                      ),
-                    ),
-                  ),
+                child: Text(
+                  'Text Button',
+                  // style: TextStyle(
+                  //   fontSize: 20,
+                  //   color: Colors.white,
+                  //   fontWeight: FontWeight.w500,
+                  // ),
                 )),
             IconButton(
                 onPressed: () {},
-                icon: Container(
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(8),
-                      color: Colors.red),
-                  child: const Icon(
-                    Icons.play_arrow,
-                    color: Colors.white,
-                  ),
+                icon: const Icon(
+                  Icons.play_arrow,
+                  // color: Colors.white,
                 )),
             Switch(
                 value: false,
