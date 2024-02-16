@@ -20,7 +20,7 @@ class Sun extends StatelessWidget {
               decoration: const BoxDecoration(
                   shape: BoxShape.circle,
                   gradient: LinearGradient(
-                      colors: [Colors.red, Colors.orange],
+                      colors: [Colors.deepOrange, Colors.yellow],
                       begin: Alignment.bottomLeft,
                       end: Alignment.topRight)),
             ),

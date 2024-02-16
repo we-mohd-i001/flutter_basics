@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_basics/application/theme_service.dart';
+import 'package:flutter_basics/theme/widgets/moon.dart';
 import 'package:flutter_basics/theme/widgets/sun.dart';
 import 'package:provider/provider.dart';
 
@@ -35,6 +36,16 @@ class ThemeScreen extends StatelessWidget {
             ),
             child: Stack(
               children: [
+                AnimatedPositioned(
+                  duration: const Duration(milliseconds: 400),
+                  top: !themeService.isDarkModeOn ? 100 : 150,
+                  right: !themeService.isDarkModeOn ? 100 : -30,
+                  child: AnimatedOpacity(
+                      opacity: themeService.isDarkModeOn ? 0 : 1,
+                      duration: const Duration(milliseconds: 456),
+                    child: const Moon(),
+                  ),
+                ),
                 AnimatedPadding(
                   duration: Duration(
                       milliseconds: themeService.isDarkModeOn ? 456 : 300),
